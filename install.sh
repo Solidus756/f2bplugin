@@ -74,7 +74,7 @@ fi
 
 function checksudo7 
 {
-	checksudo7=$(dpkg-query -l "sudo" | grep "<none>" | wc -l)
+	checksudo7=$(dpkg-query -l "sudo" | grep "<none>\|<aucun>" | wc -l)
 	if [ $sudodeb -eq 1 ]
 		then
 			apt-get update -qq && apt-get install sudo -qq
